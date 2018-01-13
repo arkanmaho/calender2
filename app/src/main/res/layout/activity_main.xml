@@ -16,12 +16,14 @@
         <CalendarView
             android:layout_width="match_parent"
             android:layout_height="306dp"
+            android:id="@+id/callll"
             android:layout_weight="1"></CalendarView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp">
             <TextView
                 android:layout_width="wrap_content"
+                android:id="@+id/total"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal|center_vertical"/>
         </LinearLayout>
@@ -32,25 +34,28 @@
     </LinearLayout>
 
 
-        <LinearLayout
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_marginBottom="150dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="15dp"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="-10dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/ulang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="150dp"
-            android:layout_marginEnd="20dp"
-            android:layout_gravity="bottom|end"
-            android:visibility="gone"
-            android:id="@+id/lay1">
+            android:clickable="true"
+            android:onClick="repeat"
+            android:src="@drawable/ic_action_rpt"
+            app:fabSize="mini" />
 
-            <android.support.design.widget.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="mini"
-                android:clickable="true"
-                android:id="@+id/ulang"
-                android:src="@drawable/ic_action_rpt" />
-
-        </LinearLayout>
+    </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lay2"
@@ -66,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:fabSize="mini"
+                android:onClick="langsung"
                 android:id="@+id/ulang1"
                 android:src="@drawable/ic_action_rpt1"
                 android:clickable="true"/>
